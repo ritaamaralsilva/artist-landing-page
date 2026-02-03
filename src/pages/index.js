@@ -1,74 +1,82 @@
+import { useState } from "react";
 import MusicPlayer from "../../components/MusicPlayer";
 import Navbar from "../../components/Navbar";
 
 export default function Home() {
-  const tracks = [
-    "/assets/wytai.mp3",
-    "/assets/apophenia.mp3",
-    "/assets/vultures.mp3"
-  ];
+  const tracks = ["/assets/apophenia.mp3", "/assets/wytai.mp3", "/assets/vultures.mp3"];
+  const [activeSection, setActiveSection] = useState("home");
 
-  return (
-    <div className="scroll-smooth">
-      <Navbar />
-      <section id="home" className="relative h-screen w-screen">
+  // Todas as seções
+  const sections = {
+    home: (
+      <section className="relative h-screen w-screen">
         <img
           src="/assets/wytai.jpeg"
           alt="Rita Silva"
           className="absolute inset-0 h-full w-full object-cover"
         />
-
+        <div className="absolute inset-0 bg-black/30" />
         <div className="relative z-10 flex flex-col items-center justify-center h-full w-full px-4">
-          <h1 className="text-white text-5xl md:text-6xl font-bold mb-6 text-center">
+          <h1 className="text-white text-5xl md:text-6xl font-bold text-center">
             Rita Silva
           </h1>
-
-          <div className="w-full max-w-md">
-            <MusicPlayer tracks={tracks} />
-          </div>
         </div>
       </section>
-
-      {/* About */}
-      <section id="about" className="min-h-screen flex items-center justify-center bg-zinc-50 dark:bg-black">
+    ),
+    about: (
+      <section className="h-screen flex items-center justify-center bg-zinc-50 dark:bg-black px-4">
         <h2 className="text-4xl font-bold">About</h2>
       </section>
-
-      {/* Music */}
-      <section id="music" className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-zinc-900 px-4">
+    ),
+    music: (
+      <section className="h-screen flex flex-col items-center justify-center bg-white dark:bg-zinc-900 px-4">
         <h2 className="text-4xl font-bold mb-4">Music</h2>
-        <p className="text-center max-w-xl">under construction...</p>
+        <MusicPlayer tracks={tracks} />
       </section>
-
-      {/* Video */}
-      <section id="video" className="min-h-screen flex flex-col items-center justify-center bg-zinc-50 dark:bg-black px-4">
+    ),
+    video: (
+      <section className="h-screen flex flex-col items-center justify-center bg-zinc-50 dark:bg-black px-4">
         <h2 className="text-4xl font-bold mb-4">Video</h2>
-        <p className="text-center max-w-xl">under construction...</p>
+        <p className="text-center max-w-xl">under construction…</p>
       </section>
-
-      {/* Live Shows */}
-      <section id="live-shows" className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-zinc-900 px-4">
+    ),
+    "live-shows": (
+      <section className="h-screen flex flex-col items-center justify-center bg-white dark:bg-zinc-900 px-4">
         <h2 className="text-4xl font-bold mb-4">Live Shows</h2>
-        <p className="text-center max-w-xl">under construction...</p>
+        <p className="text-center max-w-xl">under construction…</p>
       </section>
-
-      {/* Workshops */}
-      <section id="workshops" className="min-h-screen flex flex-col items-center justify-center bg-zinc-50 dark:bg-black px-4">
+    ),
+    workshops: (
+      <section className="h-screen flex flex-col items-center justify-center bg-zinc-50 dark:bg-black px-4">
         <h2 className="text-4xl font-bold mb-4">Workshops</h2>
-        <p className="text-center max-w-xl">under construction...</p>
+        <p className="text-center max-w-xl">under construction…</p>
       </section>
-
-      {/* Projects */}
-      <section id="projects" className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-zinc-900 px-4">
+    ),
+    projects: (
+      <section className="h-screen flex flex-col items-center justify-center bg-white dark:bg-zinc-900 px-4">
         <h2 className="text-4xl font-bold mb-4">Projects</h2>
-        <p className="text-center max-w-xl">under construction...</p>
+        <p className="text-center max-w-xl">under construction…</p>
       </section>
-
-      {/* Contact */}
-      <section id="contact" className="min-h-screen flex flex-col items-center justify-center bg-zinc-50 dark:bg-black px-4">
+    ),
+    contact: (
+      <section className="h-screen flex flex-col items-center justify-center bg-zinc-50 dark:bg-black px-4">
         <h2 className="text-4xl font-bold mb-4">Contact</h2>
-        <p className="text-center max-w-xl">under construction...</p>
+        <p className="text-center max-w-xl">under construction…</p>
       </section>
-      </div>
+    ),
+  };
+
+  return (
+    <div className="overflow-hidden h-screen w-screen">
+      {/* Navbar recebe o estado ativo */}
+      <Navbar activeSection={activeSection} setActiveSection={setActiveSection} />
+
+      {/* Renderiza apenas a seção ativa */}
+      {sections[activeSection]}
+
+      {/* Player fixo global */}
+      <MusicPlayer tracks={tracks} />
+    </div>
   );
 }
+
