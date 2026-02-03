@@ -4,6 +4,8 @@ import MusicPlayer from "../../components/MusicPlayer";
 import Navbar from "../../components/Navbar";
 import About from "../../components/About";
 import Video from "../../components/Video";
+import Music from "../../components/Music";
+
 
 
 export default function Home() {
@@ -18,7 +20,7 @@ export default function Home() {
 
   // Ensure the body overflow is updated dynamically
   useEffect(() => {
-    if (activeSection === "about") {
+    if (activeSection === "about" || activeSection === "music") {
       document.body.style.overflow = "auto"; // Allow scrolling
       document.documentElement.style.overflow = "auto"; // Ensure html can scroll
     } else {
@@ -49,11 +51,7 @@ export default function Home() {
       </section>
     ),
     about: <About />, 
-    music: (
-      <section className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-zinc-900 px-4">
-        <h2 className="text-4xl font-bold mb-4">Music</h2>
-      </section>
-    ),
+    music: <Music />,
     video: <Video />, 
     "live-shows": (
       <section className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-zinc-900 px-4">

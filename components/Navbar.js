@@ -17,13 +17,13 @@ export default function Navbar({ activeSection, setActiveSection }) {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-black/70 backdrop-blur-md z-50">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-black/30 backdrop-blur-md border-b">
       <div className="max-w-6xl mx-auto px-4 flex justify-between items-center h-16">
         {/* Logo / Home */}
         <button
           onClick={() => setActiveSection("home")}
-          className={`text-white font-bold text-xl hover:text-yellow-400 ${
-            activeSection === "home" ? "underline decoration-blue-400" : ""
+          className={`text-white font-bold text-xl hover:text-[#949492] ${
+            activeSection === "home" ? "font-bold" : ""
           }`}
         >
           Home
@@ -37,8 +37,8 @@ export default function Navbar({ activeSection, setActiveSection }) {
               <li key={link}>
                 <button
                   onClick={() => setActiveSection(sectionId)}
-                  className={`hover:text-yellow-400 ${
-                    activeSection === sectionId ? "underline decoration-blue-400" : ""
+                  className={`hover:text-[#949492] ${
+                    activeSection === sectionId ? "font-bold" : ""
                   }`}
                 >
                   {link}
@@ -85,8 +85,8 @@ export default function Navbar({ activeSection, setActiveSection }) {
                     setActiveSection(sectionId);
                     setIsOpen(false); // fecha menu depois de clicar
                   }}
-                  className={`text-white text-lg hover:text-yellow-400 ${
-                    activeSection === sectionId ? "underline decoration-blue-400" : ""
+                  className={`text-white text-lg hover:text-[#949492] ${
+                    activeSection === sectionId ? "font-bold" : ""
                   }`}
                 >
                   {link}
