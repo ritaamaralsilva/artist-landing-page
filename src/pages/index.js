@@ -3,6 +3,8 @@ import { useRouter } from "next/router";
 import MusicPlayer from "../../components/MusicPlayer";
 import Navbar from "../../components/Navbar";
 import About from "../../components/About";
+import Video from "../../components/Video";
+
 
 export default function Home() {
   const tracks = ["/assets/apophenia.mp3", "/assets/wytai.mp3", "/assets/vultures.mp3"];
@@ -46,18 +48,13 @@ export default function Home() {
         </div>
       </section>
     ),
-    about: <About />, // aqui substituímos a seção antiga pelo componente About
+    about: <About />, 
     music: (
       <section className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-zinc-900 px-4">
         <h2 className="text-4xl font-bold mb-4">Music</h2>
       </section>
     ),
-    video: (
-      <section className="min-h-screen flex flex-col items-center justify-center bg-zinc-50 dark:bg-black px-4">
-        <h2 className="text-4xl font-bold mb-4">Video</h2>
-        <p className="text-center max-w-xl">under construction…</p>
-      </section>
-    ),
+    video: <Video />, 
     "live-shows": (
       <section className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-zinc-900 px-4">
         <h2 className="text-4xl font-bold mb-4">Live Shows</h2>
