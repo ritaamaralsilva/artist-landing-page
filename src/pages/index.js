@@ -22,7 +22,7 @@ export default function Home() {
 
   // Controla o overflow do body dinamicamente
   useEffect(() => {
-    const scrollableSections = ["about", "music", "live-shows"];
+    const scrollableSections = ["about", "music", "live-shows", "workshops"];
     if (scrollableSections.includes(activeSection)) {
       document.body.style.overflow = "auto"; // Permite rolagem
       document.documentElement.style.overflow = "auto"; // Permite rolagem

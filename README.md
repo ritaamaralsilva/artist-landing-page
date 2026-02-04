@@ -8,7 +8,7 @@ This project serves both as:
 
 ---
 
-## ✨ Features
+## Features
 
 - Fullscreen hero landing with background image
 - Custom audio player (manual MP3 tracks)
@@ -23,7 +23,7 @@ This project serves both as:
 
 ---
 
-## 🧠 Tech Stack
+## Tech Stack
 
 ### Frontend
 - **Next.js (Pages Router)**
@@ -41,7 +41,7 @@ This project serves both as:
 
 ---
 
-## 📬 Contact Form (Backend)
+## Contact Form (Backend)
 
 The contact form:
 - Sends emails via a secure API route

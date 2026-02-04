@@ -2,7 +2,7 @@ export default function Workshops() {
     return (
       <section
         id="workshops"
-        className="relative min-h-screen w-screen bg-black text-brand"
+        className="relative min-h-screen w-screen bg-black text-brand overflow-y-auto"
       >
         {/* Background */}
         <img
@@ -13,7 +13,7 @@ export default function Workshops() {
         <div className="absolute inset-0 bg-black/60" />
   
         {/* Scrollable Content */}
-        <div className="relative z-10 min-h-screen overflow-y-auto px-6 pt-24 pb-28">
+        <div className="relative z-10 min-h-screen px-6 pt-24 pb-28">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-10" style={{ color: "#737dcd" }}>
               Modular Synthesis Workshop
