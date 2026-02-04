@@ -17,7 +17,7 @@ export default function Navbar({ activeSection, setActiveSection }) {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-black/30 backdrop-blur-md border-b">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-black/30 backdrop-blur-md">
       <div className="max-w-6xl mx-auto px-4 flex justify-between items-center h-16">
         {/* Logo / Home */}
         <button

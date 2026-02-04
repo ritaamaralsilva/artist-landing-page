@@ -5,34 +5,33 @@ import Navbar from "../../components/Navbar";
 import About from "../../components/About";
 import Video from "../../components/Video";
 import Music from "../../components/Music";
-
-
+import Live from "../../components/Live";
 
 export default function Home() {
   const tracks = ["/assets/apophenia.mp3", "/assets/wytai.mp3", "/assets/vultures.mp3"];
   const [activeSection, setActiveSection] = useState("home");
   const router = useRouter();
 
-  // Update the URL when the active section changes
+  // Atualiza a URL quando a seção ativa muda
   useEffect(() => {
-    router.push(`#${activeSection}`, undefined, { shallow: true }); // Update the URL without reloading the page
+    router.push(`#${activeSection}`, undefined, { shallow: true }); // Atualiza a URL sem recarregar a página
   }, [activeSection]);
 
-  // Ensure the body overflow is updated dynamically
+  // Controla o overflow do body dinamicamente
   useEffect(() => {
-    if (activeSection === "about" || activeSection === "music") {
-      document.body.style.overflow = "auto"; // Allow scrolling
-      document.documentElement.style.overflow = "auto"; // Ensure html can scroll
+    const scrollableSections = ["about", "music", "live-shows"];
+    if (scrollableSections.includes(activeSection)) {
+      document.body.style.overflow = "auto"; // Permite rolagem
+      document.documentElement.style.overflow = "auto"; // Permite rolagem
     } else {
-      document.body.style.overflow = "hidden"; // Prevent scrolling
-      document.documentElement.style.overflow = "hidden"; // Prevent scrolling
+      document.body.style.overflow = "hidden"; // Impede rolagem
+      document.documentElement.style.overflow = "hidden"; // Impede rolagem
     }
     return () => {
-      document.body.style.overflow = "auto"; // Reset on unmount
-      document.documentElement.style.overflow = "auto"; // Reset on unmount
+      document.body.style.overflow = "auto"; // Reseta ao desmontar
+      document.documentElement.style.overflow = "auto"; // Reseta ao desmontar
     };
   }, [activeSection]);
-
 
   const sections = {
     home: (
@@ -50,15 +49,10 @@ export default function Home() {
         </div>
       </section>
     ),
-    about: <About />, 
+    about: <About />,
     music: <Music />,
-    video: <Video />, 
-    "live-shows": (
-      <section className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-zinc-900 px-4">
-        <h2 className="text-4xl font-bold mb-4">Live Shows</h2>
-        <p className="text-center max-w-xl">under construction…</p>
-      </section>
-    ),
+    video: <Video />,
+    "live-shows": <Live />,
     workshops: (
       <section className="min-h-screen flex flex-col items-center justify-center bg-zinc-50 dark:bg-black px-4">
         <h2 className="text-4xl font-bold mb-4">Workshops</h2>
@@ -66,7 +60,7 @@ export default function Home() {
       </section>
     ),
     projects: (
-      <section className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-zinc-900 px-4">
+      <section className="min-h-screen flex flex-col items-center justify-center bg-zinc-50 dark:bg-black px-4">
         <h2 className="text-4xl font-bold mb-4">Projects</h2>
         <p className="text-center max-w-xl">under construction…</p>
       </section>
@@ -81,13 +75,13 @@ export default function Home() {
 
   return (
     <div className="min-h-screen w-screen">
-      {/* Navbar receives the active section */}
+      {/* Navbar recebe a seção ativa */}
       <Navbar activeSection={activeSection} setActiveSection={setActiveSection} />
 
-      {/* Render only the active section */}
+      {/* Renderiza apenas a seção ativa */}
       {sections[activeSection]}
 
-      {/* Render MusicPlayer ONLY on the home page */}
+      {/* Renderiza o MusicPlayer apenas na página inicial */}
       {activeSection === "home" && <MusicPlayer tracks={tracks} />}
     </div>
   );
