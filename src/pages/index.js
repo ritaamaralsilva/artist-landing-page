@@ -6,6 +6,7 @@ import About from "../../components/About";
 import Video from "../../components/Video";
 import Music from "../../components/Music";
 import Live from "../../components/Live";
+import Workshops from "../../components/Workshops";
 import Contact from "../../components/Contact";
 
 
@@ -39,7 +40,7 @@ export default function Home() {
     home: (
       <section className="relative min-h-screen w-screen flex items-center justify-center">
         <img
-          src="/assets/wytai.jpeg"
+          src="/assets/wytai-v2.jpeg"
           alt="Rita Silva"
           className="absolute inset-0 h-full w-full object-cover"
         />
@@ -52,18 +53,13 @@ export default function Home() {
     music: <Music />,
     video: <Video />,
     "live-shows": <Live />,
-    workshops: (
-      <section className="min-h-screen flex flex-col items-center justify-center bg-zinc-50 dark:bg-black px-4">
-        <h2 className="text-4xl font-bold mb-4">Workshops</h2>
-        <p className="text-center max-w-xl">under construction…</p>
-      </section>
-    ),
-    projects: (
+    workshops: <Workshops />,
+    /*projects: (
       <section className="min-h-screen flex flex-col items-center justify-center bg-zinc-50 dark:bg-black px-4">
         <h2 className="text-4xl font-bold mb-4">Projects</h2>
         <p className="text-center max-w-xl">under construction…</p>
       </section>
-    ),
+    ),*/
     contact: <Contact />,
   };
 

@@ -12,17 +12,17 @@ export default function Navbar({ activeSection, setActiveSection }) {
     "Video",
     "Live Shows",
     "Workshops",
-    "Projects",
+    /*"Projects",*/
     "Contact",
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-black/30 backdrop-blur-md">
+    <nav className="text-brand text-xl fixed top-0 left-0 w-full z-50 bg-black/30 backdrop-blur-md">
       <div className="max-w-6xl mx-auto px-4 flex justify-between items-center h-16">
         {/* Logo / Home */}
         <button
           onClick={() => setActiveSection("home")}
-          className={`text-brand font-bold text-xl hover:text-[#949492] ${
+          className={`hover:text-[#949492] ${
             activeSection === "home" ? "font-bold" : ""
           }`}
         >
