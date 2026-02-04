@@ -89,6 +89,9 @@ Route-based scroll control
 
 Accessibility improvements (active navigation state via aria-current)
 
+Per-page SEO metadata (title, description, Open Graph tags)
+
+
 🚧 Planned improvements
 
 PT / EN language switch
@@ -97,8 +100,8 @@ Dynamic live shows (Songkick API integration)
 
 CMS-style content management
 
-SEO optimization (per-page metadata, sitemap, structured data)
+Sitemap and robots.txt
+
+Structured data (JSON-LD)
 
 Analytics and performance monitoring
-
-Further performance and accessibility refinements

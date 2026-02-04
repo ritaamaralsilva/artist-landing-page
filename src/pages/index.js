@@ -1,6 +1,8 @@
 import Navbar from "../../components/Navbar";
 import MusicPlayer from "../../components/MusicPlayer";
 
+import Head from "next/head";
+
 export default function Home() {
   const tracks = [
     "/assets/apophenia.mp3",
@@ -9,6 +11,25 @@ export default function Home() {
   ];
 
   return (
+    <>
+      <Head>
+        <title>Rita Silva — Experimental Electronic Music</title>
+        <meta
+          name="description"
+          content="Official artist website of Rita Silva. Experimental electronic music, live performances and workshops."
+        />
+        <meta property="og:title" content="Rita Silva — Experimental Electronic Music" />
+        <meta
+          property="og:description"
+          content="Official artist website of Rita Silva. Experimental electronic music, live performances and workshops."
+        />
+        <meta property="og:image" content="/assets/og.jpg" />
+        <meta
+          property="og:url"
+          content="https://www.ritasilva.online/"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
     <div className="min-h-screen w-screen">
       <Navbar />
 
@@ -24,5 +45,6 @@ export default function Home() {
 
       <MusicPlayer tracks={tracks} />
     </div>
+    </>
   );
 }
