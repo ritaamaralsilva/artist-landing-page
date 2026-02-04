@@ -35,7 +35,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative h-screen w-screen bg-black text-white">
+    <section id="contact" className="relative h-screen w-screen bg-black text-brand">
       <img
         src="/assets/contact.jpeg"
         alt="Contact background"

@@ -6,7 +6,7 @@ export default function Navbar({ activeSection, setActiveSection }) {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const links = [
-    "Home",
+    "",
     "About",
     "Music",
     "Video",
@@ -22,15 +22,15 @@ export default function Navbar({ activeSection, setActiveSection }) {
         {/* Logo / Home */}
         <button
           onClick={() => setActiveSection("home")}
-          className={`text-white font-bold text-xl hover:text-[#949492] ${
+          className={`text-brand font-bold text-xl hover:text-[#949492] ${
             activeSection === "home" ? "font-bold" : ""
           }`}
         >
-          Home
+          Rita Silva
         </button>
 
         {/* Desktop menu */}
-        <ul className="hidden md:flex space-x-6 text-white font-medium">
+        <ul className="hidden md:flex space-x-6 text-brand font-medium">
           {links.slice(1).map((link) => {
             const sectionId = link.toLowerCase().replace(" ", "-");
             return (
@@ -50,7 +50,7 @@ export default function Navbar({ activeSection, setActiveSection }) {
 
         {/* Mobile hamburger */}
         <div className="md:hidden flex items-center">
-          <button onClick={toggleMenu} className="text-white focus:outline-none">
+          <button onClick={toggleMenu} className="text-brand focus:outline-none">
             <svg
               className="w-6 h-6"
               fill="none"
@@ -85,7 +85,7 @@ export default function Navbar({ activeSection, setActiveSection }) {
                     setActiveSection(sectionId);
                     setIsOpen(false); // fecha menu depois de clicar
                   }}
-                  className={`text-white text-lg hover:text-[#949492] ${
+                  className={`text-brand text-lg hover:text-[#949492] ${
                     activeSection === sectionId ? "font-bold" : ""
                   }`}
                 >

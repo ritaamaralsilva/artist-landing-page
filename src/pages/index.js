@@ -45,9 +45,6 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-black/30" />
         <div className="relative z-10 flex flex-col items-center justify-center px-4">
-          <h1 className="text-white text-5xl md:text-6xl font-bold text-center">
-            Rita Silva
-          </h1>
         </div>
       </section>
     ),

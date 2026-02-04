@@ -2,7 +2,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative w-screen min-h-screen bg-black text-white flex flex-col items-center justify-center px-4 py-16 overflow-y-auto"
+      className="relative w-screen min-h-screen bg-black text-brand flex flex-col items-center justify-center px-4 py-16 overflow-y-auto"
     >
       {/* Background Image */}
       <img

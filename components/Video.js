@@ -2,7 +2,7 @@ export default function Video() {
     return (
       <section
         id="video"
-        className="relative h-screen w-screen bg-black flex items-center justify-center px-4"
+        className="relative h-screen w-screen bg-black text-brand flex items-center justify-center px-4"
       >
         {/* Background */}
         <img

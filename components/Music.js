@@ -22,7 +22,7 @@ export default function Music() {
         <div className="relative z-10 min-h-screen max-w-5xl mx-auto flex flex-col items-center justify-center md:justify-center gap-8 py-10 pb-20 translate-y-8">
           {/* Embed principal */}
           <div className="w-full max-w-2xl rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 shadow-xl p-4">
-            <p className="text-white/80 text-sm mb-3 text-center">
+            <p className="text-brand/80 text-sm mb-3 text-center">
               Featured
             </p>
             <iframe
@@ -46,7 +46,7 @@ export default function Music() {
                 href={item.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-xl bg-white/10 hover:bg-[#235f66] border border-white/10 text-white py-3 px-4 text-center font-medium backdrop-blur-md transition transform scale-80 hover:scale-100"
+                className="rounded-xl bg-white/10 hover:bg-[#235f66] border border-white/10 text-brand py-3 px-4 text-center font-medium backdrop-blur-md transition transform scale-80 hover:scale-100"
               >
                 {item.name}
               </a>

@@ -2,7 +2,7 @@ export default function Live() {
     return (
       <section
         id="live-shows"
-        className="relative min-h-screen w-screen bg-black text-white"
+        className="relative min-h-screen w-screen bg-black text-brand"
       >
         {/* Background */}
         <img
