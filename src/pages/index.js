@@ -6,6 +6,8 @@ import About from "../../components/About";
 import Video from "../../components/Video";
 import Music from "../../components/Music";
 import Live from "../../components/Live";
+import Contact from "../../components/Contact";
+
 
 export default function Home() {
   const tracks = ["/assets/apophenia.mp3", "/assets/wytai.mp3", "/assets/vultures.mp3"];
@@ -65,12 +67,7 @@ export default function Home() {
         <p className="text-center max-w-xl">under construction…</p>
       </section>
     ),
-    contact: (
-      <section className="min-h-screen flex flex-col items-center justify-center bg-zinc-50 dark:bg-black px-4">
-        <h2 className="text-4xl font-bold mb-4">Contact</h2>
-        <p className="text-center max-w-xl">under construction…</p>
-      </section>
-    ),
+    contact: <Contact />,
   };
 
   return (

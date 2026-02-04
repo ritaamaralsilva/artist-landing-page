@@ -1,24 +1,67 @@
-# Artist Landing Page - Rita Silva
+# Rita Silva — Artist Website
 
-Personal Landing page of musical artist Rita Silva (that is myself).
+Personal artist website built with modern web technologies, combining music, visual identity, and backend functionality.
 
-## Current Status
+This project serves both as:
+- my official artist landing page
+- a technical portfolio demonstrating frontend + backend integration
 
-- Full screen background image in home page
-- Working MusicPlayer with Play / Pause and Next / Prev 
-- Responsive Layout for desktop and mobile
-- Base structure ready to expand with Navbar and Sections 
+---
 
-## Next Steps
+## ✨ Features
 
-- Add fixed Navbar with sections: About, Music, Video, Live Shows, Workshops, Projects, Contact
-- Language switch (PT / EN)
-- Youtube Videos integration for the Video Section
-- API Integration with Songkick for Live Shows Section OR manually add with show's webpage and online ticket sale platform 
-- Contact form that sends emails to the artist (myself) from potential promoters, future collaborators, etc
+- Fullscreen hero landing with background image
+- Custom audio player (manual MP3 tracks)
+- Fixed navigation with section switching (no page scroll)
+- Responsive design (desktop & mobile)
+- About section with scrollable content
+- Live Shows section with archived concerts by year
+- Music section with embedded Spotify player + platform links
+- Video section with YouTube embed
+- Contact form with real backend email delivery
+- Domain-verified email sending via Resend
 
-## Frameworks (so far)
+---
 
-- Next.js 13
-- React
-- Tailwind CSS
+## 🧠 Tech Stack
+
+### Frontend
+- **Next.js (Pages Router)**
+- **React**
+- **Tailwind CSS**
+
+### Backend
+- **Next.js API Routes**
+- **Resend API** (email delivery)
+- Environment variables via `.env.local`
+
+### Hosting
+- Designed for **Vercel**
+- Custom domain: `ritasilva.online`
+
+---
+
+## 📬 Contact Form (Backend)
+
+The contact form:
+- Sends emails via a secure API route
+- Uses a verified subdomain for email deliverability
+- Does not store user data
+- Sends messages directly to a booking email address
+
+(This is a real backend implementation, not a mock.)
+
+---
+
+📌 Status
+
+This project is under active development.
+Future improvements include:
+
+PT / EN language switch
+
+Dynamic live shows (Songkick API integration)
+
+CMS-style content management
+
+Performance and accessibility refinements
