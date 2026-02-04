@@ -1,4 +1,4 @@
-# Rita Silva — Artist Website
+# Rita Silva — Artist Website 
 
 Personal artist website built with modern web technologies, combining music, visual identity, and backend functionality.
 
@@ -53,7 +53,9 @@ The contact form:
 
 ---
 
-📌 Status
+📌 Status (DEPLOYED)
+
+URL www.ritasilva.online
 
 This project is under active development.
 Future improvements include:
