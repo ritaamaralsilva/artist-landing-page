@@ -1,64 +1,95 @@
-# Rita Silva — Artist Website 
+Rita Silva — Artist Website
 
 Personal artist website built with modern web technologies, combining music, visual identity, and backend functionality.
 
 This project serves both as:
-- my official artist landing page
-- a technical portfolio demonstrating frontend + backend integration
 
----
+my official artist landing page
 
-## Features
+a technical portfolio demonstrating frontend and backend integration
 
-- Fullscreen hero landing with background image
-- Custom audio player (manual MP3 tracks)
-- Fixed navigation with section switching (no page scroll)
-- Responsive design (desktop & mobile)
-- About section with scrollable content
-- Live Shows section with archived concerts by year
-- Music section with embedded Spotify player + platform links
-- Video section with YouTube embed
-- Contact form with real backend email delivery
-- Domain-verified email sending via Resend
+Features
 
----
+Fullscreen hero landing with background image
 
-## Tech Stack
+Custom audio player (manual MP3 tracks)
 
-### Frontend
-- **Next.js (Pages Router)**
-- **React**
-- **Tailwind CSS**
+Page-based navigation with clean URLs (/about, /music, etc.)
 
-### Backend
-- **Next.js API Routes**
-- **Resend API** (email delivery)
-- Environment variables via `.env.local`
+Fixed navigation with active state
 
-### Hosting
-- Designed for **Vercel**
-- Custom domain: `ritasilva.online`
+Responsive design (desktop & mobile)
 
----
+About, Music, Live Shows and Workshops pages with scrollable content
 
-## Contact Form (Backend)
+Live Shows page with archived concerts by year
+
+Music page with embedded Spotify player and external platform links
+
+Video page with YouTube embed
+
+Contact form with real backend email delivery
+
+Domain-verified email sending via Resend
+
+Tech Stack
+Frontend
+
+Next.js (Pages Router)
+
+React
+
+Tailwind CSS
+
+Backend
+
+Next.js API Routes
+
+Resend API (email delivery)
+
+Environment variables via .env.local
+
+Hosting
+
+Designed for Vercel
+
+Custom domain: https://www.ritasilva.online
+
+Contact Form (Backend)
 
 The contact form:
-- Sends emails via a secure API route
-- Uses a verified subdomain for email deliverability
-- Does not store user data
-- Sends messages directly to a booking email address
+
+Sends emails via a secure API route
+
+Uses a verified subdomain for email deliverability
+
+Does not store user data
+
+Sends messages directly to a booking email address
 
 (This is a real backend implementation, not a mock.)
 
----
-
 📌 Status (DEPLOYED)
 
-URL www.ritasilva.online
+URL: https://www.ritasilva.online
 
-This project is under active development.
-Future improvements include:
+This project is deployed and under active development.
+
+✅ Recently implemented
+
+Refactored navigation to page-based routing (removed hash navigation)
+
+Clean URLs with proper browser history support
+
+Page-level code splitting via Next.js routing
+
+Improved mobile navigation behavior
+
+Route-based scroll control
+
+Accessibility improvements (active navigation state via aria-current)
+
+🚧 Planned improvements
 
 PT / EN language switch
 
@@ -66,4 +97,8 @@ Dynamic live shows (Songkick API integration)
 
 CMS-style content management
 
-Performance and accessibility refinements
+SEO optimization (per-page metadata, sitemap, structured data)
+
+Analytics and performance monitoring
+
+Further performance and accessibility refinements
