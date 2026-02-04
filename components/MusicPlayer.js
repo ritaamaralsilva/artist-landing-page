@@ -40,7 +40,7 @@ export default function MusicPlayer({ tracks = [] }) {
         {/* PREV */}
         <button
           onClick={prevTrack}
-          className="p-1 rounded-full bg-black/5 hover:bg-[#94938e] shadow-md shadow-[#6b919c] transition-transform duration-300 transform hover:scale-110 active:scale-95"
+          className="p-1 rounded-full bg-black/5 hover:bg-[#94938e] shadow-md shadow-[#6b919c] transition-transform duration-300 transform hover:scale-110 active:scale-95 flex items-center justify-center"
         >
           <PrevIcon />
         </button>
@@ -48,7 +48,7 @@ export default function MusicPlayer({ tracks = [] }) {
         {/* PLAY / PAUSE */}
         <button
           onClick={togglePlay}
-          className="p-2 rounded-full bg-black/5 hover:bg-[#94938e] shadow-md shadow-[#6b919c] transition-transform duration-300 transform hover:scale-110 active:scale-95"
+          className="p-2 rounded-full bg-black/5 hover:bg-[#94938e] shadow-md shadow-[#6b919c] transition-transform duration-300 transform hover:scale-110 active:scale-95 flex items-center justify-center"
         >
           {isPlaying ? <PauseIcon /> : <PlayIcon />}
         </button>
@@ -56,7 +56,7 @@ export default function MusicPlayer({ tracks = [] }) {
         {/* NEXT */}
         <button
           onClick={nextTrack}
-          className="p-1 rounded-full bg-black/5 hover:bg-[#94938e] shadow-md shadow-[#6b919c] transition-transform duration-300 transform hover:scale-110 active:scale-95"
+          className="p-1 rounded-full bg-black/5 hover:bg-[#94938e] shadow-md shadow-[#6b919c] transition-transform duration-300 transform hover:scale-110 active:scale-95 flex items-center justify-center"
         >
           <NextIcon />
         </button>
@@ -76,7 +76,7 @@ export default function MusicPlayer({ tracks = [] }) {
 function PlayIcon() {
   return (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="#3d5259">
-      <polygon points="5,3 19,12 5,21" />
+      <polygon points="7,5 19,12 7,19" />
     </svg>
   );
 }

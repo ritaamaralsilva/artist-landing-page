@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Rita Silva — Experimental Electronic Music</title>
+        <title>Rita Silva — Electronic Music Artist</title>
         <meta
           name="description"
           content="Official artist website of Rita Silva. Experimental electronic music, live performances and workshops."
@@ -23,12 +23,52 @@ export default function Home() {
           property="og:description"
           content="Official artist website of Rita Silva. Experimental electronic music, live performances and workshops."
         />
-        <meta property="og:image" content="/assets/og.jpg" />
+        <meta property="og:image" content="/assets/og.jpeg" />
         <meta
           property="og:url"
           content="https://www.ritasilva.online/"
         />
         <meta name="twitter:card" content="summary_large_image" />
+
+        <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": "https://www.ritasilva.online/#person",
+        name: "Rita Silva",
+        url: "https://www.ritasilva.online/",
+        description:
+          "Electronic music artist working at the intersection of sound, performance, and experimentation.",
+        image: "https://www.ritasilva.online/assets/og.jpg",
+        jobTitle: "Electronic Music Artist",
+        knowsAbout: [
+          "Electronic music",
+          "Experimental music",
+          "Live performance",
+          "Sound design",
+          "Workshops",
+          "Modular synthesis",
+          "Audio programming",
+          "Sound art",
+          "Music production",
+          "Improvisation",
+          "Portuguese artist",
+        ],
+        sameAs: [
+
+          "https://open.spotify.com/artist/7nQFcS740R6vdJ94v66RgC",
+          "https://ritasilva.bandcamp.com/",
+          "https://music.apple.com/pt/artist/rita-silva/203777568?l=en-GB",
+          "https://instagram.com/ritaamaralsilva",
+          "https://soundcloud.com/ritasilvamusic",
+          "https://tidal.com/artist/51045583",
+          "https://music.amazon.com/albums/B0BHZL8STZ",
+        ],
+      }),
+    }}
+  />
       </Head>
     <div className="min-h-screen w-screen">
       <Navbar />

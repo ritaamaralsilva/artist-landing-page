@@ -70,6 +70,7 @@ This project is deployed and under active development.
 - Per-page SEO metadata (title, description, Open Graph tags)
 - Google Search Console setup and sitemap submission
 - GA4 analytics with client-side route tracking
+- Social sharing previews (Open Graph image)
 
 ### 🚧 Planned improvements
 - PT / EN language switch
