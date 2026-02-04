@@ -71,10 +71,10 @@ This project is deployed and under active development.
 - Google Search Console setup and sitemap submission
 - GA4 analytics with client-side route tracking
 - Social sharing previews (Open Graph image)
+- Structured data (JSON-LD) for artist entity
 
 ### 🚧 Planned improvements
 - PT / EN language switch
 - Dynamic live shows (Songkick API integration)
 - CMS-style content management
-- Structured data (JSON-LD)
 - Further performance and accessibility refinements
