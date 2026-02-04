@@ -20,9 +20,9 @@ export default async function handler(req, res) {
 
   try {
     await resend.emails.send({
-      from: "Rita Silva <contact@ritasilva.online>", 
+      from: "Rita Silva <contact@contact.ritasilva.online>", 
       to: process.env.CONTACT_TO_EMAIL, // ritasilvabooking@gmail.com
-      reply_to: process.env.CONTACT_REPLY_TO || undefined,
+      reply_to: process.env.CONTACT_REPLY_TO,
       subject: `[Site] ${subject}`,
       text: `Name: ${name}\nSubject: ${subject}\n\n${message}`,
     });
