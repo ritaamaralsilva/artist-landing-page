@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: "", subject: "", message: "" });
+  const [form, setForm] = useState({ email: "", name: "", subject: "", message: "" });
   const [status, setStatus] = useState({ state: "idle", msg: "" }); // idle | loading | success | error
 
   const onChange = (e) => {
@@ -28,7 +28,7 @@ export default function Contact() {
       }
 
       setStatus({ state: "success", msg: "Message sent. I’ll get back to you soon." });
-      setForm({ name: "", subject: "", message: "" });
+      setForm({ email: "", name: "", subject: "", message: "" });
     } catch {
       setStatus({ state: "error", msg: "Network error. Try again." });
     }
@@ -53,7 +53,21 @@ export default function Contact() {
           <form
             onSubmit={onSubmit}
             className="rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 shadow-xl p-6 space-y-4"
-          >
+          > 
+          <div>
+              <label className="block text-sm font-semibold text-white/80 mb-2">
+                Name
+              </label>
+              <input
+                name="email"
+                value={form.email}
+                onChange={onChange}
+                required
+                className="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-blue-400/60"
+                placeholder="Your email address"
+              />
+            </div>
+
             <div>
               <label className="block text-sm font-semibold text-white/80 mb-2">
                 Name
