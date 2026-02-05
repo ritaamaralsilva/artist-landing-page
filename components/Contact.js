@@ -56,7 +56,7 @@ export default function Contact() {
           > 
           <div>
               <label className="block text-sm font-semibold text-white/80 mb-2">
-                Name
+                Email
               </label>
               <input
                 name="email"
