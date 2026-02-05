@@ -59,10 +59,12 @@ export default function Contact() {
                 Email
               </label>
               <input
+                type="email"
                 name="email"
                 value={form.email}
                 onChange={onChange}
                 required
+                autoComplete="email"
                 className="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-blue-400/60"
                 placeholder="Your email address"
               />
@@ -77,6 +79,9 @@ export default function Contact() {
                 value={form.name}
                 onChange={onChange}
                 required
+                autoComplete="name"
+                autoCapitalize="words"
+                spellCheck={false}
                 className="w-full rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-blue-400/60"
                 placeholder="Your name"
               />
